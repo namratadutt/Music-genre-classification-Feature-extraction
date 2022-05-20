@@ -31,7 +31,7 @@ audio_paths.shape
 
 
 #########################################################################
-## The following code is for visualizong features using a single audio ##
+## The following code is for visualizing features using a single audio ##
 #########################################################################
 # audio_1 = audio_paths[0]
 # print(audio_1)
@@ -210,7 +210,7 @@ AllZcr = np.delete(AllZcr, bad_index, 0)
 AllCen = np.delete(AllCen, bad_index, 0)
 AllChroma = np.delete(AllChroma, bad_index, 0)
 
-# COnvert to float32
+# Convert to float32
 AllSpec = AllSpec.astype(np.float32)
 AllMel = AllMel.astype(np.float32)
 AllMfcc = AllMfcc.astype(np.float32)
@@ -235,7 +235,7 @@ audio_label[audio_label == 'rock'] = 9
 audio_label = [int(i) for i in audio_label]
 audio_label = np.array(audio_label)
 
-# COnvert labels from numerical to categorical data
+# Convert labels from numerical to categorical data
 y = tensorflow.keras.utils.to_categorical(audio_label,num_classes = 10, dtype ="int32")
 
 #print(AllSpec.shape)
